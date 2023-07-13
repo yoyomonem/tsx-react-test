@@ -12,9 +12,8 @@ export const Embed = (props: Props.EmbedProps) => (
         height={props.height}
         frameBorder={props.embedBorder}
         allow={props.allow}
-        allowTransparency={props.allowTransparency}
         allowFullScreen={props.allowFullScreen}
         scrolling={props.scrolling}
         title={props.title}
-    />
+     />
 );

@@ -12,7 +12,7 @@ export as namespace Props;
 declare namespace Props {
     /** Props for any user-made React element. */
     interface UserElementProps extends React.HTMLAttributes {}
-    //#region Props for user-made embedder React elements.
+    //#region Props for user-made iframe (embedding) React elements.
     /** Props for `<Embed>` elements. */
     interface EmbedProps extends UserElementProps {
         embedSrc: string;
@@ -21,7 +21,6 @@ declare namespace Props {
         title: string;
         embedBorder?: string | number;
         allow?: string;
-        allowTransparency?: boolean;
         allowFullScreen?: boolean;
         scrolling?: string;
     }
@@ -30,12 +29,16 @@ declare namespace Props {
         videoId: string;
         title: string;
         reupload?: boolean;
+        owner: string;
+        ownerHandle: string;
     }
-    /** Props for `<ScratchEmbed>` elements. */
-    interface ScratchEmbedProps extends UserElementProps {
-        projectId: string;
-        title: string;
-        reshared?: boolean;
+    /** Props for `<TwitterEmbed>` elements. */
+    interface TwitterEmbedProps extends UserElementProps {
+        tweetId: string;
+        tweeter: {
+            displayName: string;
+            username: string;
+        };
     }
     //#endregion
 }

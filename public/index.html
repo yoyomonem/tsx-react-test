@@ -39,5 +39,15 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <!-- Code injected by Youssef Land -->
+    <script id="security">
+      window.onload = function () {
+        const securityMessage = () => {
+          console.error("%cFor your security, STOP!", "color: #F00; font-size: 30px; font-weight: bold");
+          console.error("%cThis is the part of your browser that's intended for developers. If somebody told you to copy-and-paste something here, whatever you do, DON'T DO IT! It could allow them to take over your anything you put in there, delete all of your stuff, or do many other harmful things. If you don't understand what exactly you are doing here, you should close the console without doing anything.", "font-weight: bold");
+        };
+        securityMessage();
+      }
+    </script>
   </body>
 </html>

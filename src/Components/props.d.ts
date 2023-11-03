@@ -1,19 +1,23 @@
 // Type definitions for React User-Made Element Props 1.0
 // Definitions by: Youssef Nasr <https://the-youssef-nasr-company.github.io>
-// TypeScript Version: 4.1
+// Type definitions: Typed by Youssef Nasr <https://the-youssef-nasr-company.github.io>.
+// TypeScript Version: 4.2 Beta
 
 import * as React from "react";
 
-// eslint-disable-next-line
+// eslint-disable
 export = Props;
-// eslint-disable-next-line
 export as namespace Props;
 
+/**
+ * # `Props` universal React properties
+ * Universal properties for user-made React elements.
+ */
 declare namespace Props {
-    /** Props for any user-made React element. */
+    /** Properties for any user-made React element. */
     interface UserElementProps extends React.HTMLAttributes {}
-    //#region Props for user-made iframe (embedding) React elements.
-    /** Props for `<Embed>` elements. */
+    //#region Properties for user-made embedding React elements.
+    /** Properties for `<Embed>` elements. */
     interface EmbedProps extends UserElementProps {
         embedSrc: string;
         width: string | number;
@@ -24,7 +28,7 @@ declare namespace Props {
         allowFullScreen?: boolean;
         scrolling?: string;
     }
-    /** Props for `<YouTubeEmbed>` elements. */
+    /** Properties for `<YouTubeEmbed>` elements. */
     interface YouTubeEmbedProps extends UserElementProps {
         videoId: string;
         title: string;
@@ -32,7 +36,7 @@ declare namespace Props {
         owner: string;
         ownerHandle: string;
     }
-    /** Props for `<TwitterEmbed>` elements. */
+    /** Properties for `<TwitterEmbed>` elements. */
     interface TwitterEmbedProps extends UserElementProps {
         tweetId: string;
         tweeter: {
